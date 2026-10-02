@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>گالری هنری</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+
+        .underline {
+            text-underline-offset: 6px;
+        }
+
+        .bg {
+            background-color: rgb(0, 44, 0);
+        }
+
+        .font {
+            font-size: xx-small;
+        }
+
+        .foont {
+            font-size: x-small;
+        }
+
+        .bordr {
+            border-left: 1px solid rgba(255, 255, 255, 0.209);
+        }
+
+        .bgg {
+            background-color: rgb(0, 44, 0);
+            border-radius: 50px;
+            border: 1px solid white;
+            height: 32px;
+            width: 220px;
+        }
+
+        input::placeholder {
+            color: white;
+            font-size: x-small;
+            position: relative;
+            right: 5px;
+            bottom: 4px;
+        }
+
+        .posh {
+            position: absolute;
+            left: 810px;
+            top: 793px;
+        }
+
+        svg {
+            box-sizing: content-box;
+        }
+
+        /* .header {
+            position: fixed;
+            top: 0;
+
+        } */
+
+        body {
+            background: #f5f5ef;
+            color: #263b35;
+        }
+
+        .hero {
+            background: #e9e8d9;
+        }
+
+        .hero-img {
+            height: 300px;
+            object-fit: 32px;
+        }
+
+        .hero-text h1 {
+            font-size: 32px;
+        }
+
+        .card {
+            border: 0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .card img {
+            height: 130px;
+            object-fit: cover;
+        }
+
+        .categories {
+            background: #eeefe5;
+        }
+
+        .category-img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .about-img {
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        @media(max-width:576px) {
+            .header {
+                position: fixed;
+                bottom: 0;
+                border-radius: 0px;
+                z-index: 2;
+            }
+
+            .none {
+                display: none;
+            }
+
+            .a {
+                margin: 20px;
+                font-size: smaller;
+            }
+
+            .hero-img {
+                height: 200px;
+            }
+
+            .hero-text h1 {
+                font-size: 25px;
+            }
+
+            .category-img {
+                width: 65px;
+                height: 65px;
+            }
+        }
+    </style>
+</head>
+
+<body dir="rtl">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- این بخش مال هدر سایت -->
+            <div class="col-12 py-4 header card">
+                <div class="row">
+                    <div class="col-1 none">
+                        <p class="fs-6 h6 fs ">گالری هنری</p>
+                    </div>
+
+                    <div class="col-5">
+                        <ul class="d-flex gap-5">
+                            <li class="d-flex gap-5 text-decoration-underline underline  a">خانه</li>
+                            <li class="d-flex gap-5 a ">گالری</li>
+                            <li class="d-flex gap-5 a ">درباره‌ما</li>
+                            <li class="d-flex gap-5 a ">تماس</li>
+                        </ul>
+                    </div>
+                    <div class="col-1 none"></div>
+                    <div class="col-3 none">
+                        <div dir="ltr" class="input-group mb-3">
+                            <input type="text" class="form-control a" placeholder="جستجو">
+                            <button class="btn btn-secondary a" type="submit">برو</button>
+                        </div>
+
+                    </div>
+                    <div class="col-1 p-0 text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-bag none" viewBox="0 0 16 16">
+                            <path
+                                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z" />
+                        </svg>
+                    </div>
+                    <div class="col-1 p-0 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                            class="bi bi-person none" viewBox="0 0 16 16">
+                            <path
+                                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <!-- از اینجا تا خط 120 برای قسمت مین خالی گذاشتم -->
+            <main dir="rtl">
+                <section class="hero py-4">
+                    <div class="container-fluid">
+                        <div class="row align-items-center g-0">
+
+                            <div class="col-lg-5 hero-text p-4 p-lg-5">
+                                <h1 class="font">گالری هنری</h1>
+                                <h4 class="fonta pb-5 mt-3">روایت هنر،رنگ و فرهنگ</h4>
+                                <p class="fontb mt-3">در این گالری نمونه کاران سرکارخانم آزاده حاج رمضان را گرد هم آورده
+                                    ایم</p>
+                                <a href="#" class="btn btn-dark">
+                                    مشاهده آثار
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
+                                    </svg>
+                                </a>
+
+                            </div>
+                            <div class="col-lg-7">
+                                <img src="./project-honari/download.jfif" class="hero-img  img1 w-100"
+                                    alt="گالری هنری ایرانی">
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="works" class="py-4">
+                    <div class="container">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h4>آثار منتخب</h4>
+                            <a href="googel.com" class="text-decoration-none text-dark">
+                                مشاهده آثار
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="card h-100">
+                                    <img src="./project-honari/download.jfif" class="card-img-top"
+                                        alt="نقاشی دختر بهار">
+                                    <div class="card-body">
+                                        <h6>نام اثر</h6>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                                            <path
+                                                d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                                        </svg>
+                                        <p class="text-muted small mb-1">نقاش</p>
+                                        <p class="mb-0">قیمت</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="card h-100">
+                                    <img src="./project-honari/download.jfif" class="card-img-top"
+                                        alt="نقاشی دختر بهار">
+                                    <div class="card-body">
+                                        <h6>نام اثر</h6>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                                            <path
+                                                d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.3573.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                                        </svg>
+                                        <p class="text-muted small mb-1">نقاش</p>
+                                        <p class="mb-0">قیمت</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="card h-100">
+                                    <img src="./project-honari/download.jfif" class="card-img-top"
+                                        alt="نقاشی دختر بهار">
+                                    <div class="card-body">
+                                        <h6>نام اثر</h6>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                                            <path
+                                                d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                                        </svg>
+                                        <p class="text-muted small mb-1">نقاش</p>
+                                        <p class="mb-0">قیمت</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="card h-100">
+                                    <img src="./project-honari/download.jfif" class="card-img-top"
+                                        alt="نقاشی دختر بهار">
+                                    <div class="card-body">
+                                        <h6>نام اثر</h6>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                                            <path
+                                                d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                                        </svg>
+                                        <p class="text-muted small mb-1">نقاش</p>
+                                        <p class="mb-0">قیمت</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="categories py-4">
+                    <div class="container">
+                        <div class="d-flex justify-content-between align-items-center-mb-4">
+                            <h4>دسته بندی آثار</h4>
+                            <a href="googel.com" class="text-decoration-none text-dark">
+                                مشاهده آثار
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="row g-3 text-center">
+                            <div class="col-4 col-md">
+                                <img src="./project-honari/download.jfif" class="category-img"
+                                    alt="نگار گری">
+                                <p class="mt-2">نگار گری</p>
+
+                            </div>
+                            <div class="col-4 col-md">
+                                <img src="./project-honari/download.jfif" class="category-img"
+                                    alt="نگار گری">
+                                <p class="mt-2">نگار گری</p>
+
+                            </div>
+                            <div class="col-4 col-md">
+                                <img src="./project-honari/download.jfif" class="category-img"
+                                    alt="نگار گری">
+                                <p class="mt-2">نگار گری</p>
+
+                            </div>
+                            <div class="col-4 col-md">
+                                <img src="./project-honari/download.jfif" class="category-img"
+                                    alt="نگار گری">
+                                <p class="mt-2">نگار گری</p>
+
+                            </div>
+                            <div class="col-4 col-md">
+                                <img src="./project-honari/download.jfif" class="category-img"
+                                    alt="نگار گری">
+                                <p class="mt-2">نگار گری</p>
+
+                            </div>
+                            <div class="col-4 col-md">
+                                <img src="./project-honari/download.jfif" class="category-img"
+                                    alt="نگار گری">
+                                <p class="mt-2">نگار گری</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="py-4">
+                    <div class="container">
+                        <div class="row align-items-center g-4">
+                            <div class="col-md-6">
+                                <img src="./project-honari/download.jfif" alt="درباره گالری"
+                                    class="img-fluid rounded">
+                            </div>
+                            <div class="col-md-6">
+                                <h2>درباره گالری هنری</h2>
+                                <p class="text-muted mt-3">گالری هنری فضایی برای معرفی و حمایت از هنرمندان ایرانی
+                                    و نمایش آثار ارزشمند ان هاست. هدف ما پیوند میان
+                                    هنر،فرهنگ و علاقمندان به دنیای نقاشی است.
+                                </p>
+                                <a href="#" class="btn btn-succes rounded-pill px-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
+                                    </svg>
+                                    بیشتر بدانید</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <!-- از ینجا تا پایین برای فوتره -->
+            <div class="col-12 py-4 bg ">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-2 bordr">
+                        <p class="text-light fs-6 pb-2 m-0">گالری هنری</p>
+                        <p class="text-light foont pb-4 m-0">هنر زندگی را زیبا تر میکند</p>
+                        <hr class="text-light">
+                        <p class="text-light font">-246شخص حقوق مخلوط است</p>
+                    </div>
+                    <div class="col-3 px-5 bordr ">
+                        <p class="text-light foont">عضویت در خبرنامه</p>
+                        <p class="text-light font">برای دریافت بهترین خبرهاو رویداد ها ایمیل خود را وارد کنید</p>
+                        <div class="pt-4">
+                            <input type="email" class="bgg" placeholder="ایمیل شما" name="email">
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"
+                            class="bi bi-arrow-right posh" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                        </svg>
+                    </div>
+                    <div class="col-2 text-center text-light bordr">
+                        <p class="foont p-0">دسترسی سریع</p>
+                        <p class="font p-0">خانه</p>
+                        <p class="font p-0">گالری</p>
+                        <p class="font p-0">درباره ما</p>
+                        <p class="font p-0">تماس</p>
+                    </div>
+                    <div dir="ltr" class="col-3 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" fill="white"
+                            class="bi bi-instagram m-2 pb-3" viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                        </svg><svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" fill="white"
+                            class="bi bi-telegram m-2 pb-3" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09" />
+                        </svg><svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" fill="white"
+                            class="bi bi-twitter m-2 pb-3" viewBox="0 0 16 16">
+                            <path
+                                d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15" />
+                        </svg>
+                        <p class="text-light foont">مارا در شبکه های اجتماعی دنبال کنید</p>
+                        <hr class="text-light">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
